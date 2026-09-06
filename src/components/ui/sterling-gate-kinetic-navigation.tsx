@@ -473,8 +473,6 @@ export function SterlingGateKineticNavigation() {
               >
                 samy@samysai.ifo
               </a>
-
-              </a>
             </div>
           </div>
         </div>
