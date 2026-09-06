@@ -1,14 +1,20 @@
-# Welcome to your Lovable project
+# Samys Ai
+
+https://github.com/zohaibzulqarnain613-ctrl/sb1-lrg6gst1.git
+
+clone this complete website here so we can start do editing.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://design-deck-ready.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/5edae89d-ec98-4829-99e4-7827c7bed903).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +26,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS

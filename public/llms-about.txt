@@ -1,0 +1,29 @@
+# About SamysAI
+Official Website: https://samysai.com
+
+
+## Company Description
+SamysAI is a technology team that builds AI-powered systems, digital products, and growth infrastructure for businesses. The company integrates AI and automation with professional digital development to solve operational challenges and support scale.
+
+## Mission
+To take repetitive work off people's hands with systems that are genuinely useful, so teams can spend their time on the work that needs them.
+
+## Vision
+To build a business environment where intelligent systems work alongside people, handling routine communication and operational load, making practical technology accessible to businesses of all sizes.
+
+## Values
+- **Innovation**: Adopting new technology when it solves a real problem.
+- **Integrity**: Setting realistic expectations about system capabilities.
+- **Excellence**: Judging work by its durability and utility in daily use.
+- **Empowerment**: Building tools that make people better at their work.
+
+## Approach
+SamysAI follows a problem-first approach, defining the business problem before choosing the technology stack. The goal is to build connected systems where components (AI, web, apps, outreach) work together seamlessly.
+
+## Team
+The team is organized around key functional areas:
+- CEO: Samy (Strategy and Business Systems)
+- Head of AI: JZ (Automation and Conversational Systems)
+- Head of Web Development: Zaibi (Full-stack and Performance)
+- Head of Content Creation: AZ (Messaging and Growth Content)
+- Head of App Development: Sufi K (Mobile and UX)

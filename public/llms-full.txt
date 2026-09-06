@@ -1,0 +1,81 @@
+# SamysAI
+
+## Company Overview
+SamysAI builds intelligent systems, digital products, and growth infrastructure for businesses. The company specializes in integrating AI-powered solutions with professional software development to solve operational challenges and support business growth.
+
+## What SamysAI Does
+SamysAI provides a unified stack of services across AI automation, software engineering, and digital outreach. The focus is on building practical, connected systems rather than isolated services.
+
+## AI & Automation
+
+### AI Phone Callers
+- **What it does**: Automated voice interactions for handling routine business calls.
+- **Primary business problems**: Missed leads, high volume of routine calls, 24/7 availability needs.
+- **Key capabilities**: Lead qualification, appointment scheduling, FAQ handling, call routing.
+- **Typical use cases**: After-hours call handling, qualifying inbound leads, routine outbound follow-ups.
+- **Related SamysAI pages**: https://samysai.com/services/ai-phone-callers
+- **Related blog content**: https://samysai.com/blog/ai-phone-callers
+
+### AI Chatbots
+- **What it does**: Conversational AI for web, WhatsApp, and social media.
+- **Primary business problems**: Slow customer response times, lead leakage, high support costs.
+- **Key capabilities**: Instant customer support, lead qualification, appointment booking, multi-channel deployment.
+- **Typical use cases**: Website customer assistance, lead capture on social media, automated FAQ responses.
+- **Related SamysAI pages**: https://samysai.com/services/ai-chatbots
+- **Related blog content**: https://samysai.com/blog/ai-chatbots
+
+## Digital Development
+
+### Web Development
+- **What it does**: Performance-focused business websites and technical SEO.
+- **Primary business problems**: Poor user experience, slow loading speeds, low search visibility.
+- **Key capabilities**: Responsive design, technical SEO, performance optimization, secure architecture.
+- **Typical use cases**: Business brochure sites, customer-facing web applications, internal dashboards.
+- **Related SamysAI pages**: https://samysai.com/services/web-development
+- **Related blog content**: https://samysai.com/blog/web-development
+
+### App Development
+- **What it does**: Native and cross-platform mobile application development.
+- **Primary business problems**: Customer engagement, mobile accessibility, operational fragmentation.
+- **Key capabilities**: iOS/Android development, cross-platform architecture (React Native/Flutter), API integration.
+- **Typical use cases**: E-commerce apps, booking systems, internal reporting tools.
+- **Related SamysAI pages**: https://samysai.com/services/app-development
+- **Related blog content**: https://samysai.com/blog/app-development
+
+## Growth & Operations
+
+### Cold Email Dashboards
+- **What it does**: Centralized management for outbound email infrastructure.
+- **Primary business problems**: Poor deliverability, fragmented campaign management, lack of outreach visibility.
+- **Key capabilities**: Infrastructure setup (SPF/DKIM/DMARC), campaign monitoring, deliverability tracking, CRM integration.
+- **Typical use cases**: Managing multi-account outreach, monitoring sender reputation, automating follow-up sequences.
+- **Related SamysAI pages**: https://samysai.com/services/cold-email-dashboard
+- **Related blog content**: https://samysai.com/blog/cold-email-dashboards
+
+### Content Creation
+- **What it does**: AI-assisted content production workflows.
+- **Primary business problems**: Inconsistent brand voice, content scaling issues, high production time.
+- **Key capabilities**: AI-assisted drafting, brand voice consistency, SEO optimization, content repurposing.
+- **Typical use cases**: Scaling blog production, generating social media copy, maintaining website content freshness.
+- **Related SamysAI pages**: https://samysai.com/services/content-creation
+- **Related blog content**: https://samysai.com/blog/content-creation
+
+## About SamysAI
+- **Mission**: To take repetitive work off people's hands with systems that are genuinely useful, so teams can spend their time on the work that needs them.
+- **Vision**: To build a business environment where intelligent systems work alongside people, making advanced technology accessible to businesses of all sizes.
+- **Approach**: Problem-first engineering—defining the business problem before selecting the technology stack.
+
+## Blog
+- **URL**: https://samysai.com/blog
+- **Topics**: AI Automation, Web/App Development, Growth Infrastructure, SEO, and Content Strategy.
+
+## Contact
+- **Email**: samy@samysai.info
+- **Phone**: +1 (437) 829-2544
+- **Strategy Consultation**: https://calendly.com/samysai/clients
+
+## Privacy
+- **Policy**: https://samysai.com/privacy-policy
+
+## Terms
+- **Service**: https://samysai.com/terms-of-service
