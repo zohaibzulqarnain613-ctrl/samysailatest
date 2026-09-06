@@ -32,7 +32,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
 		// Scene setup
 		const scene = new THREE.Scene();
-		scene.fog = new THREE.Fog(0x000000, 2000, 10000);
+		scene.fog = new THREE.Fog(0x000000, 6000, 20000);
 
 		const camera = new THREE.PerspectiveCamera(
 			60,
