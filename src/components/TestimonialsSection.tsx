@@ -11,7 +11,7 @@ const TestimonialsSection: React.FC = () => {
       jobtitle: 'Website and SEO Client'
     },
     {
-      image: '/images/image.png',
+      image: '/images/image.webp',
       audio: '',
       text: 'We wanted a cold email system that we could rely on without managing every detail ourselves. SamysAI built the dashboard, organised the outreach and set up the follow ups for us. It has made our lead generation much easier to manage.',
       name: 'David Weber',

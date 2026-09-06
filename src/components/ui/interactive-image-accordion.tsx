@@ -47,7 +47,7 @@ const accordionItems = [
   {
     id: 7,
     title: 'Digital Marketing',
-    imageUrl: '/images/image.png',
+    imageUrl: '/images/image.webp',
     link: '/services/digital-marketing',
   },
 ];
