@@ -54,9 +54,13 @@ const accordionItems = [
 
 
 const AccordionItem = ({ item, isActive, onMouseEnter, isMobile, index }: { item: typeof accordionItems[0], isActive: boolean, onMouseEnter: () => void, isMobile: boolean, index: number }) => {
+  const Wrapper: any = isMobile ? 'div' : Link;
+  const wrapperProps = isMobile
+    ? { onClick: onMouseEnter, role: 'button' as const }
+    : { to: item.link };
   return (
-    <Link
-      to={item.link}
+    <Wrapper
+      {...wrapperProps}
       className={`
         relative rounded-2xl overflow-hidden cursor-pointer
         transition-all duration-700 ease-in-out
