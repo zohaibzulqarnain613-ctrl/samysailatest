@@ -15,6 +15,37 @@ const ContactFooter = lazy(() => import('@/components/ContactFooter'));
 const DottedSurface = lazy(() => import('@/components/ui/dotted-surface').then(module => ({ default: module.DottedSurface })));
 const LandingAccordionItem = lazy(() => import('./ui/interactive-image-accordion').then(module => ({ default: module.LandingAccordionItem })));
 
+// Mounts the WebGL dotted surface only after the hero has painted, so the
+// heavy 3D runtime never blocks first paint. Visually identical once loaded.
+const DeferredDottedSurface: React.FC = () => {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    const start = () => !cancelled && setReady(true);
+    const raf = requestAnimationFrame(() => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(start, { timeout: 1200 });
+      } else {
+        setTimeout(start, 300);
+      }
+    });
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  if (!ready) return null;
+
+  return (
+    <Suspense fallback={null}>
+      <DottedSurface />
+    </Suspense>
+  );
+};
+
+
 const ParticleBackground: React.FC = () => {
   const [showParticles, setShowParticles] = useState(false);
 
@@ -84,9 +115,7 @@ const HomePage = () => {
     <>
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 sm:pt-20">
-        <Suspense fallback={null}>
-          <DottedSurface />
-        </Suspense>
+        <DeferredDottedSurface />
         <ParticleBackground />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
           <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-12">
