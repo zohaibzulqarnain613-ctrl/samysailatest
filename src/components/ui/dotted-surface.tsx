@@ -32,7 +32,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
 		// Scene setup
 		const scene = new THREE.Scene();
-		scene.fog = new THREE.Fog(0x000000, 6000, 20000);
+		// no fog: keeps the dots evenly bright across the grid
 
 		const camera = new THREE.PerspectiveCamera(
 			60,
@@ -90,6 +90,8 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			transparent: true,
 			opacity: 0.85,
 			sizeAttenuation: true,
+			depthWrite: false,
+			blending: THREE.AdditiveBlending,
 		});
 
 
