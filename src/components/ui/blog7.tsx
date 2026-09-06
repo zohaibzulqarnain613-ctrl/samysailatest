@@ -104,7 +104,7 @@ const Blog7 = ({
         )}
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {posts.map((post) => (
+          {posts.map((post, index) => (
             <Card key={post.id} className="grid grid-rows-[auto_auto_1fr_auto] rounded-2xl border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10">
               <div className="aspect-[16/9] w-full">
                 <Link
@@ -114,7 +114,11 @@ const Blog7 = ({
                   <img
                     src={post.image}
                     alt={`${post.title} - ${post.label} guide by SamysAI`}
-                    loading="lazy"
+                    loading={index < 3 ? "eager" : "lazy"}
+                    fetchPriority={index < 3 ? "high" : "auto"}
+                    decoding="async"
+                    width={640}
+                    height={360}
                     className="h-full w-full object-cover object-center"
                   />
                 </Link>
