@@ -175,7 +175,9 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		// Cleanup function
 		return () => {
 			window.removeEventListener('resize', handleResize);
+			ro.disconnect();
 			document.removeEventListener('visibilitychange', handleVisibility);
+
 
 			stop();
 
