@@ -111,19 +111,21 @@ const AccordionItem = ({ item, isActive, onMouseEnter, isMobile, index }: { item
         {item.title}
       </span>
       {isMobile && (
-        <span
+        <Link
+          to={item.link}
+          onClick={(e) => e.stopPropagation()}
           className={`
-            absolute right-3 z-10 inline-flex shrink-0 items-center rounded-full
+            absolute right-3 z-20 inline-flex shrink-0 items-center rounded-full
             border border-blue-400/50 bg-blue-600/25 px-2.5 py-0.5 text-[10px] font-bold
             leading-tight text-blue-200 backdrop-blur-sm transition-all duration-300
             ${isActive ? 'bottom-5' : 'top-1/2 -translate-y-1/2'}
           `}
         >
           Learn more
-        </span>
+        </Link>
       )}
 
-    </Link>
+    </Wrapper>
   );
 };
 
