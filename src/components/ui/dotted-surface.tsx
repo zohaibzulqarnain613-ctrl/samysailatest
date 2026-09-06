@@ -51,7 +51,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		});
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 1.5));
 		renderer.setSize(initial.width, initial.height);
-		renderer.setClearColor(0xff0000, 1);
+		renderer.setClearColor(0x000000, 0);
 		renderer.domElement.style.width = '100%';
 		renderer.domElement.style.height = '100%';
 
