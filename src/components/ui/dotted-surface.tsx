@@ -182,31 +182,17 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			ro.disconnect();
 			document.removeEventListener('visibilitychange', handleVisibility);
 
-
 			stop();
 
-			if (sceneRef.current) {
-
-				sceneRef.current.scene.traverse((object) => {
-					if (object instanceof THREE.Points) {
-						object.geometry.dispose();
-						if (Array.isArray(object.material)) {
-							object.material.forEach((material) => material.dispose());
-						} else {
-							object.material.dispose();
-						}
-					}
-				});
-
-				sceneRef.current.renderer.dispose();
-
-				if (containerRef.current && sceneRef.current.renderer.domElement) {
-					containerRef.current.removeChild(
-						sceneRef.current.renderer.domElement,
-					);
-				}
-			}
+			// Dispose this effect's own objects (not sceneRef, which a second
+			// mount may already have overwritten — that left a stale canvas behind).
+			geometry.dispose();
+			material.dispose();
+			renderer.dispose();
+			renderer.domElement.remove();
+			sceneRef.current = null;
 		};
+
 	}, []);
 
 	return (
