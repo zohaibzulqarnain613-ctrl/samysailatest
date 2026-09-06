@@ -20,7 +20,7 @@ const AboutUsPage: React.FC = () => {
       message: "SamysAI exists to make advanced technology practical.\n\nWe build AI powered systems, digital products, and growth infrastructure for businesses that need their operations to run more reliably. That means AI phone callers and chatbots, web and app development, cold email dashboards and content systems, delivered as one connected stack rather than separate services.\n\nOur approach starts with the business problem. We look at how work happens today, where time is lost, and where a system can carry the repetitive load. Then we build something that fits how the team already works.\n\nIf that is the kind of technology partner you are looking for, we would be glad to talk.",
       color: "#3b82f6",
       expertise: ['Strategy', 'Business Systems', 'AI Solutions', 'Growth'],
-      imageUrl: "/images/a485aafb-cc89-4b59-ae01-069e508b4907.JPG"
+      imageUrl: "/images/a485aafb-cc89-4b59-ae01-069e508b4907.webp"
     },
     {
       name: "JZ",
@@ -40,7 +40,7 @@ const AboutUsPage: React.FC = () => {
       message: "I lead web development at SamysAI.\n\nWe build websites and web applications that are fast, clear to use, and straightforward to maintain. In most projects the site is connected to something else we build, such as an automation, a dashboard, or a chatbot, so it needs to work as part of a larger system rather than on its own.\n\nWe care about performance, accessibility, and keeping the codebase in a state where the business can keep building on it.",
       color: "#06b6d4",
       expertise: ['Web Development', 'Dashboards', 'Performance', 'Full Stack'],
-      imageUrl: "/images/IMG_2418_Original.jpg"
+      imageUrl: "/images/IMG_2418_Original.webp"
     },
     {
       name: "Abdullah J",
@@ -50,7 +50,7 @@ const AboutUsPage: React.FC = () => {
       message: "I lead cold email outreach at SamysAI.\n\nWe build outreach systems that prioritize quality over quantity. A cold email should feel like a relevant business suggestion rather than an intrusion, and that requires clean data, proper infrastructure, and clear messaging.\n\nMy focus is on the technical and strategic layers that ensure emails reach the right inbox and start the right conversation.",
       color: "#f59e0b",
       expertise: ['Cold Email', 'Lead Gen', 'Email Infrastructure', 'Deliverability'],
-      imageUrl: "/images/IMG_4750.png"
+      imageUrl: "/images/IMG_4750.webp"
     },
     {
       name: "Sami S",
@@ -60,7 +60,7 @@ const AboutUsPage: React.FC = () => {
       message: "I lead app development at SamysAI.\n\nWe build mobile and cross platform applications, usually connected to the same systems and data the rest of the stack uses. That connection matters, because an app that sits apart from the business tends to be abandoned.\n\nFrom the first build to release, the priority is a product that is stable, usable, and possible to extend later.",
       color: "#10b981",
       expertise: ['App Development', 'Mobile Apps', 'Cross Platform', 'User Experience'],
-      imageUrl: "/images/8f89c358-8a36-4e02-9c78-dd2c51d3aa42.JPG"
+      imageUrl: "/images/8f89c358-8a36-4e02-9c78-dd2c51d3aa42.webp"
     },
     {
       name: "AZ",

@@ -4,7 +4,7 @@ import { Component as TypewriterTestimonial } from '@/components/ui/typewriter-t
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      image: '/images/hanane_benalia_image_copy.jpeg',
+      image: '/images/hanane_benalia_image_copy.webp',
       audio: '',
       text: 'SamysAI gave our website a much clearer direction and helped us improve how people find us online. The SEO work felt thoughtful and practical, and the site now represents our business in a much more professional way.',
       name: 'Hanane Benalia',
