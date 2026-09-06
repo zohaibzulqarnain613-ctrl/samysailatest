@@ -19,8 +19,9 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		if (!containerRef.current) return;
 
 		const SEPARATION = 150;
-		const AMOUNTX = 30;
-		const AMOUNTY = 40;
+		const isMobile = window.matchMedia('(max-width: 767px)').matches;
+		const AMOUNTX = isMobile ? 18 : 26;
+		const AMOUNTY = isMobile ? 24 : 34;
 
 		// Scene setup
 		const scene = new THREE.Scene();
@@ -36,9 +37,10 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
 		const renderer = new THREE.WebGLRenderer({
 			alpha: true,
-			antialias: true,
+			antialias: false,
+			powerPreference: 'low-power',
 		});
-		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 1.5));
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor(scene.fog.color, 0);
 
@@ -83,11 +85,16 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		scene.add(points);
 
 		let count = 0;
-		let animationId = 0;
+		const rafRef = { id: 0 };
+		let lastFrame = 0;
+		const FRAME_INTERVAL = 1000 / 30; // cap at 30fps: lighter CPU/GPU, visually identical
 
 		// Animation function
-		const animate = () => {
-			animationId = requestAnimationFrame(animate);
+		const animate = (now: number) => {
+			rafRef.id = requestAnimationFrame(animate);
+
+			if (now - lastFrame < FRAME_INTERVAL) return;
+			lastFrame = now;
 
 			const positionAttribute = geometry.attributes.position;
 			const positions = positionAttribute.array as Float32Array;
@@ -108,17 +115,23 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			positionAttribute.needsUpdate = true;
 
 			renderer.render(scene, camera);
-			count += 0.1;
+			count += 0.2;
+		};
+
+		const start = () => {
+			if (rafRef.id) return;
+			lastFrame = 0;
+			rafRef.id = requestAnimationFrame(animate);
+		};
+		const stop = () => {
+			if (rafRef.id) cancelAnimationFrame(rafRef.id);
+			rafRef.id = 0;
 		};
 
 		// Pause animation when tab is not visible
 		const handleVisibility = () => {
-			if (document.hidden) {
-				cancelAnimationFrame(animationId);
-				animationId = 0;
-			} else if (!animationId) {
-				animate();
-			}
+			if (document.hidden) stop();
+			else start();
 		};
 		document.addEventListener('visibilitychange', handleVisibility);
 
@@ -132,7 +145,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		window.addEventListener('resize', handleResize);
 
 		// Start animation
-		animate();
+		start();
 
 		// Store references
 		sceneRef.current = {
@@ -140,7 +153,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			camera,
 			renderer,
 			particles: [points],
-			animationId,
+			animationId: 0,
 			count,
 		};
 
@@ -149,8 +162,9 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			window.removeEventListener('resize', handleResize);
 			document.removeEventListener('visibilitychange', handleVisibility);
 
+			stop();
+
 			if (sceneRef.current) {
-				cancelAnimationFrame(sceneRef.current.animationId);
 
 				sceneRef.current.scene.traverse((object) => {
 					if (object instanceof THREE.Points) {
