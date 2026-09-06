@@ -163,7 +163,7 @@ const HomePage = () => {
               {/* Description */}
               <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl">
                 <TypewriterEffect
-                  text="We design and build AI-powered systems, digital products, and growth infrastructure—from intelligent phone agents and chatbots to websites, applications, and automated sales systems."
+                  text="We design and build AI-powered systems, digital products, and growth infrastructure from intelligent phone agents and chatbots to websites, applications, and automated sales systems."
                   speed={50}
                   showCursor={false}
                 />
