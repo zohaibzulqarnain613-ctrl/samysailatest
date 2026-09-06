@@ -146,14 +146,18 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		};
 		document.addEventListener('visibilitychange', handleVisibility);
 
-		// Handle window resize
+		// Handle resize of the container
 		const handleResize = () => {
-			camera.aspect = window.innerWidth / window.innerHeight;
+			const { width, height } = getSize();
+			camera.aspect = width / height;
 			camera.updateProjectionMatrix();
-			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.setSize(width, height);
 		};
 
 		window.addEventListener('resize', handleResize);
+		const ro = new ResizeObserver(handleResize);
+		ro.observe(container);
+
 
 		// Start animation
 		start();
