@@ -460,18 +460,18 @@ export function SterlingGateKineticNavigation() {
             <div>
               <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">Socials</p>
               <div className="flex gap-6 text-sm font-bold text-white uppercase italic">
-                <a href="#" className="hover:text-blue-400">Instagram</a>
-                <a href="#" className="hover:text-blue-400">LinkedIn</a>
-                <a href="#" className="hover:text-blue-400">Twitter</a>
+                <a href="https://www.instagram.com/samys.ai?igsh=bzVxcHdndzBmYTZ3" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Instagram</a>
+                <a href="https://www.linkedin.com/company/samysai" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">LinkedIn</a>
+                <a href="https://x.com/samys_ai?s=21" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Twitter</a>
               </div>
             </div>
             <div>
               <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">Get in touch</p>
               <a
-                href="mailto:hello@samysai.com"
+                href="mailto:samy@samysai.ifo"
                 className="text-lg font-black text-white hover:text-blue-400 transition-colors italic"
               >
-                hello@samysai.com
+                samy@samysai.ifo
               </a>
             </div>
           </div>
