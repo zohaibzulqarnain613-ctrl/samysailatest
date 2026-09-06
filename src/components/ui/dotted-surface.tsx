@@ -16,12 +16,19 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 	} | null>(null);
 
 	useEffect(() => {
-		if (!containerRef.current) return;
+		const container = containerRef.current;
+		if (!container) return;
 
 		const SEPARATION = 150;
 		const isMobile = window.matchMedia('(max-width: 767px)').matches;
 		const AMOUNTX = isMobile ? 18 : 26;
 		const AMOUNTY = isMobile ? 24 : 34;
+
+		const getSize = () => ({
+			width: container.clientWidth || window.innerWidth,
+			height: container.clientHeight || window.innerHeight,
+		});
+		const initial = getSize();
 
 		// Scene setup
 		const scene = new THREE.Scene();
@@ -29,7 +36,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
 		const camera = new THREE.PerspectiveCamera(
 			60,
-			window.innerWidth / window.innerHeight,
+			initial.width / initial.height,
 			1,
 			10000,
 		);
@@ -41,10 +48,13 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			powerPreference: 'low-power',
 		});
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 1.5));
-		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.setSize(initial.width, initial.height);
 		renderer.setClearColor(scene.fog.color, 0);
+		renderer.domElement.style.width = '100%';
+		renderer.domElement.style.height = '100%';
 
-		containerRef.current.appendChild(renderer.domElement);
+		container.appendChild(renderer.domElement);
+
 
 		// Create particles
 		const particles: THREE.Points[] = [];
