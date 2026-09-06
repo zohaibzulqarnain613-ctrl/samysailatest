@@ -92,15 +92,15 @@ const AccordionItem = ({ item, isActive, onMouseEnter, isMobile, index }: { item
       </div>
       <span
         className={`
-          absolute text-white text-lg font-semibold whitespace-nowrap z-10
+          absolute text-white font-semibold z-10
           transition-all duration-300 ease-in-out
           ${isMobile
             ? isActive
-              ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0'
-              : 'left-6 top-1/2 -translate-y-1/2 rotate-0'
+              ? 'bottom-5 left-4 right-28 truncate text-base'
+              : 'left-4 right-28 top-1/2 -translate-y-1/2 truncate text-base'
             : isActive
-              ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0'
-              : 'w-auto text-left bottom-24 left-1/2 -translate-x-1/2 rotate-90'
+              ? 'text-lg whitespace-nowrap bottom-6 left-1/2 -translate-x-1/2 rotate-0'
+              : 'text-lg whitespace-nowrap w-auto text-left bottom-24 left-1/2 -translate-x-1/2 rotate-90'
           }
         `}
       >
@@ -109,15 +109,16 @@ const AccordionItem = ({ item, isActive, onMouseEnter, isMobile, index }: { item
       {isMobile && (
         <span
           className={`
-            absolute right-4 z-10 inline-flex items-center gap-1 rounded-full
-            border border-blue-400/50 bg-blue-600/20 px-3 py-1 text-[11px] font-bold
-            text-blue-300 backdrop-blur-sm transition-all duration-300
-            ${isActive ? 'bottom-6' : 'top-1/2 -translate-y-1/2'}
+            absolute right-3 z-10 inline-flex shrink-0 items-center rounded-full
+            border border-blue-400/50 bg-blue-600/25 px-2.5 py-0.5 text-[10px] font-bold
+            leading-tight text-blue-200 backdrop-blur-sm transition-all duration-300
+            ${isActive ? 'bottom-5' : 'top-1/2 -translate-y-1/2'}
           `}
         >
           Learn more
         </span>
       )}
+
     </Link>
   );
 };
