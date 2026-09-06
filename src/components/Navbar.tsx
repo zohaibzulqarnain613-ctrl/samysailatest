@@ -101,9 +101,12 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Left side - Logo */}
-          <div className={`flex items-center space-x-2 sm:space-x-3 transition-all duration-700 ease-out ${
-            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-          }`}>
+          <Link
+            to="/"
+            className={`flex items-center space-x-2 sm:space-x-3 transition-all duration-700 ease-out ${
+              isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+            }`}
+          >
             <div className="relative">
               <div className="absolute inset-0 bg-blue-500/30 rounded-full blur-xl animate-pulse"></div>
               <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border-2 border-blue-400/40 flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.5)] overflow-hidden">
@@ -117,7 +120,7 @@ const Navbar: React.FC = () => {
             <span className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg">
               SamysAI
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
