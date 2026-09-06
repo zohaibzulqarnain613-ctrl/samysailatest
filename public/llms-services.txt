@@ -1,0 +1,55 @@
+# SamysAI Structured Service Knowledge
+
+## AI Phone Callers
+- **URL**: https://samysai.com/services/ai-phone-callers
+- **Category**: AI & Automation
+- **Description**: Automated voice agents designed to handle routine business conversations, qualify leads, and schedule appointments 24/7.
+- **Capabilities**: Lead qualification, appointment scheduling, FAQ responses, call routing, after-hours handling, routine outbound calls.
+- **Use Cases**: Real estate lead qualification, healthcare appointment setting, customer support call overflow.
+- **Related Services**: AI Chatbots, Web Development.
+- **Related Blog Articles**: AI Phone Callers for Business: A Practical Guide.
+
+## AI Chatbots
+- **URL**: https://samysai.com/services/ai-chatbots
+- **Category**: AI & Automation
+- **Description**: Intelligent conversational systems for websites and social platforms that handle customer inquiries and lead capture instantly.
+- **Capabilities**: 24/7 customer service, lead qualification, information collection, multi-channel deployment (WhatsApp, IG, Web).
+- **Use Cases**: E-commerce customer support, lead generation for service businesses, automated booking assistance.
+- **Related Services**: AI Phone Callers, Web Development.
+- **Related Blog Articles**: Intelligent AI Chatbots for Business.
+
+## Web Development
+- **URL**: https://samysai.com/services/web-development
+- **Category**: Digital Development
+- **Description**: Professional web development focused on performance, user experience, and technical SEO alignment with business goals.
+- **Capabilities**: Frontend/Backend development, responsive design, technical SEO, API integrations, secure architecture.
+- **Use Cases**: Corporate websites, customer portals, internal business dashboards.
+- **Related Services**: App Development, AI Chatbots.
+- **Related Blog Articles**: Modern Web Development for Business.
+
+## App Development
+- **URL**: https://samysai.com/services/app-development
+- **Category**: Digital Development
+- **Description**: Development of scalable mobile applications for iOS and Android built around specific business workflows.
+- **Capabilities**: Native/Cross-platform development, UX/UI design, API integration, secure data handling, cloud infrastructure.
+- **Use Cases**: E-commerce applications, internal team productivity tools, service-based mobile platforms.
+- **Related Services**: Web Development, Cold Email Dashboards.
+- **Related Blog Articles**: App Development for Business Growth.
+
+## Cold Email Dashboards
+- **URL**: https://samysai.com/services/cold-email-dashboard
+- **Category**: Growth & Operations
+- **Description**: Centralized outreach infrastructure for managing cold email campaigns, monitoring deliverability, and ensuring sender health.
+- **Capabilities**: Infrastructure setup, deliverability monitoring, sequence automation, CRM integration, prospect management.
+- **Use Cases**: B2B sales outreach, agency client acquisition, outreach infrastructure management.
+- **Related Services**: Content Creation, Web Development.
+- **Related Blog Articles**: Cold Email Dashboards for Outreach.
+
+## Content Creation
+- **URL**: https://samysai.com/services/content-creation
+- **Category**: Growth & Operations
+- **Description**: AI-assisted content production workflows designed to maintain brand consistency and scale marketing materials.
+- **Capabilities**: Blog production, social media copy, brand voice alignment, SEO optimization, editorial review workflows.
+- **Use Cases**: Scaling SEO content production, maintaining social media presence, automating product descriptions.
+- **Related Services**: Cold Email Dashboards, Web Development.
+- **Related Blog Articles**: AI Content Creation for Business.

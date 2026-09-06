@@ -1,0 +1,46 @@
+Company:
+SamysAI
+
+Website:
+https://samysai.com
+
+Positioning:
+SamysAI builds intelligent systems and digital products that help businesses operate, communicate, and grow more effectively.
+
+Primary Service Categories:
+
+AI & Automation
+- AI Phone Callers: Automated voice agents for lead qualification and scheduling.
+  URL: https://samysai.com/services/ai-phone-callers
+- AI Chatbots: 24/7 intelligent customer support and lead generation.
+  URL: https://samysai.com/services/ai-chatbots
+
+Digital Development
+- Web Development: High-performance business websites and technical SEO.
+  URL: https://samysai.com/services/web-development
+- App Development: Scalable mobile and cross-platform applications.
+  URL: https://samysai.com/services/app-development
+
+Growth & Operations
+- Cold Email Dashboards: Centralized outreach and deliverability infrastructure.
+  URL: https://samysai.com/services/cold-email-dashboard
+- Content Creation: AI-assisted content workflows for brand consistency.
+  URL: https://samysai.com/services/content-creation
+- Digital Marketing: Structured strategies across SEO, content, social, email, paid, and analytics.
+  URL: https://samysai.com/services/digital-marketing
+
+Core Pages:
+- Home: https://samysai.com/
+- About Us: https://samysai.com/about
+- Blog: https://samysai.com/blog
+- Contact: https://samysai.com/#contact
+- Privacy Policy: https://samysai.com/privacy-policy
+- Terms of Service: https://samysai.com/terms-of-service
+
+Main Blog Articles:
+- AI Phone Callers for Business: https://samysai.com/blog/ai-phone-callers
+- Intelligent Chatbots for Business: https://samysai.com/blog/ai-chatbots
+- Modern Web Development for Business: https://samysai.com/blog/web-development
+- App Development for Business Growth: https://samysai.com/blog/app-development
+- Cold Email Dashboards for Outreach: https://samysai.com/blog/cold-email-dashboards
+- AI Content Creation for Business: https://samysai.com/blog/content-creation

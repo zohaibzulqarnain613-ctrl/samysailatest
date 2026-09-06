@@ -10,33 +10,356 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
+import { Route as TimelineRouteImport } from './routes/timeline'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogAiChatbotsRouteImport } from './routes/blog/ai-chatbots'
+import { Route as BlogAiPhoneCallersRouteImport } from './routes/blog/ai-phone-callers'
+import { Route as BlogAppDevelopmentRouteImport } from './routes/blog/app-development'
+import { Route as BlogColdEmailDashboardsRouteImport } from './routes/blog/cold-email-dashboards'
+import { Route as BlogContentCreationRouteImport } from './routes/blog/content-creation'
+import { Route as BlogWebDevelopmentRouteImport } from './routes/blog/web-development'
+import { Route as ServicesAiChatbotsRouteImport } from './routes/services/ai-chatbots'
+import { Route as ServicesAiPhoneCallersRouteImport } from './routes/services/ai-phone-callers'
+import { Route as ServicesAppDevelopmentRouteImport } from './routes/services/app-development'
+import { Route as ServicesColdEmailDashboardRouteImport } from './routes/services/cold-email-dashboard'
+import { Route as ServicesContentCreationRouteImport } from './routes/services/content-creation'
+import { Route as ServicesCrmAutoSyncRouteImport } from './routes/services/crm-auto-sync'
+import { Route as ServicesDigitalMarketingRouteImport } from './routes/services/digital-marketing'
+import { Route as ServicesIgDmBotRouteImport } from './routes/services/ig-dm-bot'
+import { Route as ServicesLinkedinOutreachRouteImport } from './routes/services/linkedin-outreach'
+import { Route as ServicesWebDevelopmentRouteImport } from './routes/services/web-development'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
+  id: '/terms-of-service',
+  path: '/terms-of-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TimelineRoute = TimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogAiChatbotsRoute = BlogAiChatbotsRouteImport.update({
+  id: '/ai-chatbots',
+  path: '/ai-chatbots',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogAiPhoneCallersRoute = BlogAiPhoneCallersRouteImport.update({
+  id: '/ai-phone-callers',
+  path: '/ai-phone-callers',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogAppDevelopmentRoute = BlogAppDevelopmentRouteImport.update({
+  id: '/app-development',
+  path: '/app-development',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogColdEmailDashboardsRoute = BlogColdEmailDashboardsRouteImport.update({
+  id: '/cold-email-dashboards',
+  path: '/cold-email-dashboards',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogContentCreationRoute = BlogContentCreationRouteImport.update({
+  id: '/content-creation',
+  path: '/content-creation',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogWebDevelopmentRoute = BlogWebDevelopmentRouteImport.update({
+  id: '/web-development',
+  path: '/web-development',
+  getParentRoute: () => BlogRoute,
+} as any)
+const ServicesAiChatbotsRoute = ServicesAiChatbotsRouteImport.update({
+  id: '/services/ai-chatbots',
+  path: '/services/ai-chatbots',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAiPhoneCallersRoute = ServicesAiPhoneCallersRouteImport.update({
+  id: '/services/ai-phone-callers',
+  path: '/services/ai-phone-callers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAppDevelopmentRoute = ServicesAppDevelopmentRouteImport.update({
+  id: '/services/app-development',
+  path: '/services/app-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesColdEmailDashboardRoute =
+  ServicesColdEmailDashboardRouteImport.update({
+    id: '/services/cold-email-dashboard',
+    path: '/services/cold-email-dashboard',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesContentCreationRoute = ServicesContentCreationRouteImport.update({
+  id: '/services/content-creation',
+  path: '/services/content-creation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesCrmAutoSyncRoute = ServicesCrmAutoSyncRouteImport.update({
+  id: '/services/crm-auto-sync',
+  path: '/services/crm-auto-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesDigitalMarketingRoute =
+  ServicesDigitalMarketingRouteImport.update({
+    id: '/services/digital-marketing',
+    path: '/services/digital-marketing',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesIgDmBotRoute = ServicesIgDmBotRouteImport.update({
+  id: '/services/ig-dm-bot',
+  path: '/services/ig-dm-bot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesLinkedinOutreachRoute =
+  ServicesLinkedinOutreachRouteImport.update({
+    id: '/services/linkedin-outreach',
+    path: '/services/linkedin-outreach',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesWebDevelopmentRoute = ServicesWebDevelopmentRouteImport.update({
+  id: '/services/web-development',
+  path: '/services/web-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/case-studies': typeof CaseStudiesRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/faqs': typeof FaqsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/timeline': typeof TimelineRoute
+  '/blog/ai-chatbots': typeof BlogAiChatbotsRoute
+  '/blog/ai-phone-callers': typeof BlogAiPhoneCallersRoute
+  '/blog/app-development': typeof BlogAppDevelopmentRoute
+  '/blog/cold-email-dashboards': typeof BlogColdEmailDashboardsRoute
+  '/blog/content-creation': typeof BlogContentCreationRoute
+  '/blog/web-development': typeof BlogWebDevelopmentRoute
+  '/services/ai-chatbots': typeof ServicesAiChatbotsRoute
+  '/services/ai-phone-callers': typeof ServicesAiPhoneCallersRoute
+  '/services/app-development': typeof ServicesAppDevelopmentRoute
+  '/services/cold-email-dashboard': typeof ServicesColdEmailDashboardRoute
+  '/services/content-creation': typeof ServicesContentCreationRoute
+  '/services/crm-auto-sync': typeof ServicesCrmAutoSyncRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
+  '/services/ig-dm-bot': typeof ServicesIgDmBotRoute
+  '/services/linkedin-outreach': typeof ServicesLinkedinOutreachRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/case-studies': typeof CaseStudiesRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/faqs': typeof FaqsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/timeline': typeof TimelineRoute
+  '/blog/ai-chatbots': typeof BlogAiChatbotsRoute
+  '/blog/ai-phone-callers': typeof BlogAiPhoneCallersRoute
+  '/blog/app-development': typeof BlogAppDevelopmentRoute
+  '/blog/cold-email-dashboards': typeof BlogColdEmailDashboardsRoute
+  '/blog/content-creation': typeof BlogContentCreationRoute
+  '/blog/web-development': typeof BlogWebDevelopmentRoute
+  '/services/ai-chatbots': typeof ServicesAiChatbotsRoute
+  '/services/ai-phone-callers': typeof ServicesAiPhoneCallersRoute
+  '/services/app-development': typeof ServicesAppDevelopmentRoute
+  '/services/cold-email-dashboard': typeof ServicesColdEmailDashboardRoute
+  '/services/content-creation': typeof ServicesContentCreationRoute
+  '/services/crm-auto-sync': typeof ServicesCrmAutoSyncRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
+  '/services/ig-dm-bot': typeof ServicesIgDmBotRoute
+  '/services/linkedin-outreach': typeof ServicesLinkedinOutreachRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/case-studies': typeof CaseStudiesRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/faqs': typeof FaqsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/timeline': typeof TimelineRoute
+  '/blog/ai-chatbots': typeof BlogAiChatbotsRoute
+  '/blog/ai-phone-callers': typeof BlogAiPhoneCallersRoute
+  '/blog/app-development': typeof BlogAppDevelopmentRoute
+  '/blog/cold-email-dashboards': typeof BlogColdEmailDashboardsRoute
+  '/blog/content-creation': typeof BlogContentCreationRoute
+  '/blog/web-development': typeof BlogWebDevelopmentRoute
+  '/services/ai-chatbots': typeof ServicesAiChatbotsRoute
+  '/services/ai-phone-callers': typeof ServicesAiPhoneCallersRoute
+  '/services/app-development': typeof ServicesAppDevelopmentRoute
+  '/services/cold-email-dashboard': typeof ServicesColdEmailDashboardRoute
+  '/services/content-creation': typeof ServicesContentCreationRoute
+  '/services/crm-auto-sync': typeof ServicesCrmAutoSyncRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
+  '/services/ig-dm-bot': typeof ServicesIgDmBotRoute
+  '/services/linkedin-outreach': typeof ServicesLinkedinOutreachRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/case-studies'
+    | '/cookie-policy'
+    | '/faqs'
+    | '/privacy-policy'
+    | '/terms-of-service'
+    | '/timeline'
+    | '/blog/ai-chatbots'
+    | '/blog/ai-phone-callers'
+    | '/blog/app-development'
+    | '/blog/cold-email-dashboards'
+    | '/blog/content-creation'
+    | '/blog/web-development'
+    | '/services/ai-chatbots'
+    | '/services/ai-phone-callers'
+    | '/services/app-development'
+    | '/services/cold-email-dashboard'
+    | '/services/content-creation'
+    | '/services/crm-auto-sync'
+    | '/services/digital-marketing'
+    | '/services/ig-dm-bot'
+    | '/services/linkedin-outreach'
+    | '/services/web-development'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/case-studies'
+    | '/cookie-policy'
+    | '/faqs'
+    | '/privacy-policy'
+    | '/terms-of-service'
+    | '/timeline'
+    | '/blog/ai-chatbots'
+    | '/blog/ai-phone-callers'
+    | '/blog/app-development'
+    | '/blog/cold-email-dashboards'
+    | '/blog/content-creation'
+    | '/blog/web-development'
+    | '/services/ai-chatbots'
+    | '/services/ai-phone-callers'
+    | '/services/app-development'
+    | '/services/cold-email-dashboard'
+    | '/services/content-creation'
+    | '/services/crm-auto-sync'
+    | '/services/digital-marketing'
+    | '/services/ig-dm-bot'
+    | '/services/linkedin-outreach'
+    | '/services/web-development'
+    | '/blog'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/case-studies'
+    | '/cookie-policy'
+    | '/faqs'
+    | '/privacy-policy'
+    | '/terms-of-service'
+    | '/timeline'
+    | '/blog/ai-chatbots'
+    | '/blog/ai-phone-callers'
+    | '/blog/app-development'
+    | '/blog/cold-email-dashboards'
+    | '/blog/content-creation'
+    | '/blog/web-development'
+    | '/services/ai-chatbots'
+    | '/services/ai-phone-callers'
+    | '/services/app-development'
+    | '/services/cold-email-dashboard'
+    | '/services/content-creation'
+    | '/services/crm-auto-sync'
+    | '/services/digital-marketing'
+    | '/services/ig-dm-bot'
+    | '/services/linkedin-outreach'
+    | '/services/web-development'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRouteWithChildren
+  CaseStudiesRoute: typeof CaseStudiesRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
+  FaqsRoute: typeof FaqsRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsOfServiceRoute: typeof TermsOfServiceRoute
+  TimelineRoute: typeof TimelineRoute
+  ServicesAiChatbotsRoute: typeof ServicesAiChatbotsRoute
+  ServicesAiPhoneCallersRoute: typeof ServicesAiPhoneCallersRoute
+  ServicesAppDevelopmentRoute: typeof ServicesAppDevelopmentRoute
+  ServicesColdEmailDashboardRoute: typeof ServicesColdEmailDashboardRoute
+  ServicesContentCreationRoute: typeof ServicesContentCreationRoute
+  ServicesCrmAutoSyncRoute: typeof ServicesCrmAutoSyncRoute
+  ServicesDigitalMarketingRoute: typeof ServicesDigitalMarketingRoute
+  ServicesIgDmBotRoute: typeof ServicesIgDmBotRoute
+  ServicesLinkedinOutreachRoute: typeof ServicesLinkedinOutreachRoute
+  ServicesWebDevelopmentRoute: typeof ServicesWebDevelopmentRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +371,226 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-service': {
+      id: '/terms-of-service'
+      path: '/terms-of-service'
+      fullPath: '/terms-of-service'
+      preLoaderRoute: typeof TermsOfServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/timeline': {
+      id: '/timeline'
+      path: '/timeline'
+      fullPath: '/timeline'
+      preLoaderRoute: typeof TimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/ai-chatbots': {
+      id: '/blog/ai-chatbots'
+      path: '/ai-chatbots'
+      fullPath: '/blog/ai-chatbots'
+      preLoaderRoute: typeof BlogAiChatbotsRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/ai-phone-callers': {
+      id: '/blog/ai-phone-callers'
+      path: '/ai-phone-callers'
+      fullPath: '/blog/ai-phone-callers'
+      preLoaderRoute: typeof BlogAiPhoneCallersRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/app-development': {
+      id: '/blog/app-development'
+      path: '/app-development'
+      fullPath: '/blog/app-development'
+      preLoaderRoute: typeof BlogAppDevelopmentRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/cold-email-dashboards': {
+      id: '/blog/cold-email-dashboards'
+      path: '/cold-email-dashboards'
+      fullPath: '/blog/cold-email-dashboards'
+      preLoaderRoute: typeof BlogColdEmailDashboardsRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/content-creation': {
+      id: '/blog/content-creation'
+      path: '/content-creation'
+      fullPath: '/blog/content-creation'
+      preLoaderRoute: typeof BlogContentCreationRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/web-development': {
+      id: '/blog/web-development'
+      path: '/web-development'
+      fullPath: '/blog/web-development'
+      preLoaderRoute: typeof BlogWebDevelopmentRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/services/ai-chatbots': {
+      id: '/services/ai-chatbots'
+      path: '/services/ai-chatbots'
+      fullPath: '/services/ai-chatbots'
+      preLoaderRoute: typeof ServicesAiChatbotsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ai-phone-callers': {
+      id: '/services/ai-phone-callers'
+      path: '/services/ai-phone-callers'
+      fullPath: '/services/ai-phone-callers'
+      preLoaderRoute: typeof ServicesAiPhoneCallersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/app-development': {
+      id: '/services/app-development'
+      path: '/services/app-development'
+      fullPath: '/services/app-development'
+      preLoaderRoute: typeof ServicesAppDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/cold-email-dashboard': {
+      id: '/services/cold-email-dashboard'
+      path: '/services/cold-email-dashboard'
+      fullPath: '/services/cold-email-dashboard'
+      preLoaderRoute: typeof ServicesColdEmailDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/content-creation': {
+      id: '/services/content-creation'
+      path: '/services/content-creation'
+      fullPath: '/services/content-creation'
+      preLoaderRoute: typeof ServicesContentCreationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/crm-auto-sync': {
+      id: '/services/crm-auto-sync'
+      path: '/services/crm-auto-sync'
+      fullPath: '/services/crm-auto-sync'
+      preLoaderRoute: typeof ServicesCrmAutoSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/digital-marketing': {
+      id: '/services/digital-marketing'
+      path: '/services/digital-marketing'
+      fullPath: '/services/digital-marketing'
+      preLoaderRoute: typeof ServicesDigitalMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ig-dm-bot': {
+      id: '/services/ig-dm-bot'
+      path: '/services/ig-dm-bot'
+      fullPath: '/services/ig-dm-bot'
+      preLoaderRoute: typeof ServicesIgDmBotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/linkedin-outreach': {
+      id: '/services/linkedin-outreach'
+      path: '/services/linkedin-outreach'
+      fullPath: '/services/linkedin-outreach'
+      preLoaderRoute: typeof ServicesLinkedinOutreachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/web-development': {
+      id: '/services/web-development'
+      path: '/services/web-development'
+      fullPath: '/services/web-development'
+      preLoaderRoute: typeof ServicesWebDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface BlogRouteChildren {
+  BlogAiChatbotsRoute: typeof BlogAiChatbotsRoute
+  BlogAiPhoneCallersRoute: typeof BlogAiPhoneCallersRoute
+  BlogAppDevelopmentRoute: typeof BlogAppDevelopmentRoute
+  BlogColdEmailDashboardsRoute: typeof BlogColdEmailDashboardsRoute
+  BlogContentCreationRoute: typeof BlogContentCreationRoute
+  BlogWebDevelopmentRoute: typeof BlogWebDevelopmentRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogAiChatbotsRoute: BlogAiChatbotsRoute,
+  BlogAiPhoneCallersRoute: BlogAiPhoneCallersRoute,
+  BlogAppDevelopmentRoute: BlogAppDevelopmentRoute,
+  BlogColdEmailDashboardsRoute: BlogColdEmailDashboardsRoute,
+  BlogContentCreationRoute: BlogContentCreationRoute,
+  BlogWebDevelopmentRoute: BlogWebDevelopmentRoute,
+  BlogIndexRoute: BlogIndexRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BlogRoute: BlogRouteWithChildren,
+  CaseStudiesRoute: CaseStudiesRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
+  FaqsRoute: FaqsRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsOfServiceRoute: TermsOfServiceRoute,
+  TimelineRoute: TimelineRoute,
+  ServicesAiChatbotsRoute: ServicesAiChatbotsRoute,
+  ServicesAiPhoneCallersRoute: ServicesAiPhoneCallersRoute,
+  ServicesAppDevelopmentRoute: ServicesAppDevelopmentRoute,
+  ServicesColdEmailDashboardRoute: ServicesColdEmailDashboardRoute,
+  ServicesContentCreationRoute: ServicesContentCreationRoute,
+  ServicesCrmAutoSyncRoute: ServicesCrmAutoSyncRoute,
+  ServicesDigitalMarketingRoute: ServicesDigitalMarketingRoute,
+  ServicesIgDmBotRoute: ServicesIgDmBotRoute,
+  ServicesLinkedinOutreachRoute: ServicesLinkedinOutreachRoute,
+  ServicesWebDevelopmentRoute: ServicesWebDevelopmentRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

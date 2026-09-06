@@ -12,4 +12,16 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    optimizeDeps: {
+      exclude: ["@splinetool/react-spline", "@splinetool/runtime"],
+      include: ["lodash.debounce"],
+    },
+    assetsInclude: ["**/*.wasm"],
+    server: {
+      fs: {
+        allow: [".."],
+      },
+    },
+  },
 });

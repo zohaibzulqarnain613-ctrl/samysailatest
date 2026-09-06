@@ -6,11 +6,15 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useLocation,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, type ReactNode, Suspense, lazy, useState } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import Navbar from "@/components/Navbar";
+
+const ChatBot = lazy(() => import("@/components/ChatBot"));
 
 function NotFoundComponent() {
   return (
@@ -77,23 +81,89 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "SamysAI | AI Automation Agency — AI Phone Callers, Chatbots & Growth Systems" },
+      {
+        name: "description",
+        content:
+          "SamysAI builds AI phone callers, chatbots, outreach systems, CRM automations and custom web apps that scale business growth. Book a free strategy call.",
+      },
+      { name: "author", content: "SamysAI" },
+      { name: "keywords", content: "AI automation agency, AI phone callers, AI chatbots, cold email automation, CRM auto sync, web development, app development, digital marketing, content creation, SamysAI" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "theme-color", content: "#0b1020" },
+      { property: "og:title", content: "SamysAI | AI Automation Agency" },
+      {
+        property: "og:description",
+        content:
+          "AI phone callers, chatbots, outreach automations and custom software that scale your business. See verified client experiences and case studies.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/images/hanane_benalia_image_copy.jpeg" },
+      { property: "og:image:alt", content: "SamysAI client experience — Hanane Benalia" },
+      { property: "og:site_name", content: "SamysAI" },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "SamysAI | AI Automation Agency" },
+      {
+        name: "twitter:description",
+        content:
+          "AI phone callers, chatbots, outreach automations and custom software that scale your business.",
+      },
+      { name: "twitter:image", content: "/images/hanane_benalia_image_copy.jpeg" },
+      { name: "twitter:image:alt", content: "SamysAI client experience — Hanane Benalia" },
     ],
     links: [
+      {
+        rel: "preconnect",
+        href: "https://prod.spline.design",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "dns-prefetch",
+        href: "https://prod.spline.design",
+      },
+      {
+        rel: "preload",
+        href: "https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode",
+        as: "fetch",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preconnect",
+        href: "https://images.unsplash.com",
+      },
+      {
+        rel: "dns-prefetch",
+        href: "https://images.unsplash.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://images.pexels.com",
+      },
+      {
+        rel: "dns-prefetch",
+        href: "https://images.pexels.com",
+      },
+      {
+        rel: "preload",
+        href: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&format=webp",
+        as: "image",
+        fetchpriority: "high" as any,
+      },
+
+      {
+        rel: "preload",
+        href: appCss,
+        as: "style",
+      },
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -114,13 +184,45 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+// ScrollToTop removed to allow TanStack Router's native scrollRestoration: true to manage position memory correctly.
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+
+      <div className="w-full bg-gradient-to-br from-gray-900 via-black to-gray-800 overflow-x-hidden">
+        <Navbar />
+        <main className="w-full">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Suspense fallback={<div className="min-h-screen w-full bg-gray-950" />}>
+            <Outlet />
+          </Suspense>
+        </main>
+        <Suspense fallback={null}>
+          <DeferredChatBot />
+        </Suspense>
+      </div>
     </QueryClientProvider>
   );
 }
+
+function DeferredChatBot() {
+  const [shouldRender, setShouldRender] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(() => setShouldRender(true));
+      } else {
+        setShouldRender(true);
+      }
+    }, 3500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!shouldRender) return null;
+  return <ChatBot />;
+}
+
