@@ -106,6 +106,18 @@ const AccordionItem = ({ item, isActive, onMouseEnter, isMobile, index }: { item
       >
         {item.title}
       </span>
+      {isMobile && (
+        <span
+          className={`
+            absolute right-4 z-10 inline-flex items-center gap-1 rounded-full
+            border border-blue-400/50 bg-blue-600/20 px-3 py-1 text-[11px] font-bold
+            text-blue-300 backdrop-blur-sm transition-all duration-300
+            ${isActive ? 'bottom-6' : 'top-1/2 -translate-y-1/2'}
+          `}
+        >
+          Learn more
+        </span>
+      )}
     </Link>
   );
 };
