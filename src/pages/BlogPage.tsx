@@ -18,7 +18,7 @@ const blogData = {
       author: "SamysAI Team",
       published: "20 Oct 2024",
       url: "/blog/ai-phone-callers",
-      image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=640&h=360&fit=crop&auto=format&q=60",
     },
     {
       id: "post-2",
@@ -29,7 +29,7 @@ const blogData = {
       author: "SamysAI Team",
       published: "15 Oct 2024",
       url: "/blog/ai-chatbots",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=640&h=360&fit=crop&auto=format&q=60",
     },
     {
       id: "post-3",
@@ -40,7 +40,7 @@ const blogData = {
       author: "SamysAI Team",
       published: "10 Oct 2024",
       url: "/blog/web-development",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=640&h=360&fit=crop&auto=format&q=60",
     },
     {
       id: "post-4",
@@ -51,7 +51,7 @@ const blogData = {
       author: "SamysAI Team",
       published: "5 Oct 2024",
       url: "/blog/content-creation",
-      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=640&h=360&fit=crop&auto=format&q=60",
     },
     {
       id: "post-5",
@@ -62,7 +62,7 @@ const blogData = {
       author: "SamysAI Team",
       published: "1 Oct 2024",
       url: "/blog/cold-email-dashboards",
-      image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=640&h=360&fit=crop&auto=format&q=60",
     },
     {
       id: "post-6",
@@ -73,7 +73,7 @@ const blogData = {
       author: "SamysAI Team",
       published: "25 Sep 2024",
       url: "/blog/app-development",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=640&h=360&fit=crop&auto=format&q=60",
     },
   ],
 };
