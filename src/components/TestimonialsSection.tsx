@@ -4,14 +4,14 @@ import { Component as TypewriterTestimonial } from '@/components/ui/typewriter-t
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      image: '/images/hanane_benalia_image_copy.jpeg',
+      image: '/images/hanane_benalia_image_copy.webp',
       audio: '',
       text: 'SamysAI gave our website a much clearer direction and helped us improve how people find us online. The SEO work felt thoughtful and practical, and the site now represents our business in a much more professional way.',
       name: 'Hanane Benalia',
       jobtitle: 'Website and SEO Client'
     },
     {
-      image: '/images/image.png',
+      image: '/images/image.webp',
       audio: '',
       text: 'We wanted a cold email system that we could rely on without managing every detail ourselves. SamysAI built the dashboard, organised the outreach and set up the follow ups for us. It has made our lead generation much easier to manage.',
       name: 'David Weber',

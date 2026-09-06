@@ -41,13 +41,13 @@ const accordionItems = [
   {
     id: 6,
     title: 'Content Creation',
-    imageUrl: '/images/hanane_benalia_image_copy.jpeg',
+    imageUrl: '/images/hanane_benalia_image_copy.webp',
     link: '/services/content-creation',
   },
   {
     id: 7,
     title: 'Digital Marketing',
-    imageUrl: '/images/image.png',
+    imageUrl: '/images/image.webp',
     link: '/services/digital-marketing',
   },
 ];
