@@ -245,6 +245,8 @@ export function SterlingGateKineticNavigation() {
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    // Start loading the contact form chunk immediately so it appears fast.
+    prefetchContactSection();
     closeMenu();
 
     const navigateAndScroll = () => scrollToSection("contact", 80);
