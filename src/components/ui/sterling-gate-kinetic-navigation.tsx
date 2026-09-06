@@ -9,6 +9,14 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(CustomEase);
 }
 
+// Preload the contact form chunk so tapping "Contact us" shows it instantly.
+let contactPrefetchStarted = false;
+function prefetchContactSection() {
+  if (contactPrefetchStarted) return;
+  contactPrefetchStarted = true;
+  import("@/components/ContactFooter");
+}
+
 export function SterlingGateKineticNavigation() {
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -22,6 +30,11 @@ export function SterlingGateKineticNavigation() {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Load the contact form in the background as soon as the menu opens.
+  useEffect(() => {
+    if (isMenuOpen) prefetchContactSection();
+  }, [isMenuOpen]);
 
   // Always close the menu when the route changes
   useEffect(() => {
@@ -245,6 +258,8 @@ export function SterlingGateKineticNavigation() {
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    // Start loading the contact form chunk immediately so it appears fast.
+    prefetchContactSection();
     closeMenu();
 
     const navigateAndScroll = () => scrollToSection("contact", 80);
