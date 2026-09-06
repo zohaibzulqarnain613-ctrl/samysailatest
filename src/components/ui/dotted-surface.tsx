@@ -16,24 +16,33 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 	} | null>(null);
 
 	useEffect(() => {
-		if (!containerRef.current) return;
+		const container = containerRef.current;
+		if (!container) return;
 
 		const SEPARATION = 150;
 		const isMobile = window.matchMedia('(max-width: 767px)').matches;
 		const AMOUNTX = isMobile ? 18 : 26;
 		const AMOUNTY = isMobile ? 24 : 34;
 
+		const getSize = () => ({
+			width: container.clientWidth || window.innerWidth,
+			height: container.clientHeight || window.innerHeight,
+		});
+		const initial = getSize();
+
 		// Scene setup
 		const scene = new THREE.Scene();
-		scene.fog = new THREE.Fog(0x000000, 2000, 10000);
+		// no fog: keeps the dots evenly bright across the grid
 
 		const camera = new THREE.PerspectiveCamera(
 			60,
-			window.innerWidth / window.innerHeight,
+			initial.width / initial.height,
 			1,
 			10000,
 		);
 		camera.position.set(0, 355, 1220);
+		camera.lookAt(0, 0, 0);
+
 
 		const renderer = new THREE.WebGLRenderer({
 			alpha: true,
@@ -41,10 +50,13 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			powerPreference: 'low-power',
 		});
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 1.5));
-		renderer.setSize(window.innerWidth, window.innerHeight);
-		renderer.setClearColor(scene.fog.color, 0);
+		renderer.setSize(initial.width, initial.height);
+		renderer.setClearColor(0x000000, 0);
+		renderer.domElement.style.width = '100%';
+		renderer.domElement.style.height = '100%';
 
-		containerRef.current.appendChild(renderer.domElement);
+		container.appendChild(renderer.domElement);
+
 
 		// Create particles
 		const particles: THREE.Points[] = [];
@@ -61,7 +73,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 				const z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
 
 				positions.push(x, y, z);
-				colors.push(96, 165, 250);
+				colors.push(96 / 255, 165 / 255, 250 / 255);
 			}
 		}
 
@@ -73,12 +85,15 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
 		// Create material
 		const material = new THREE.PointsMaterial({
-			size: 8,
+			size: 14,
 			vertexColors: true,
 			transparent: true,
-			opacity: 0.4,
+			opacity: 0.85,
 			sizeAttenuation: true,
+			depthWrite: false,
+			blending: THREE.AdditiveBlending,
 		});
+
 
 		// Create points object
 		const points = new THREE.Points(geometry, material);
@@ -135,14 +150,18 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		};
 		document.addEventListener('visibilitychange', handleVisibility);
 
-		// Handle window resize
+		// Handle resize of the container
 		const handleResize = () => {
-			camera.aspect = window.innerWidth / window.innerHeight;
+			const { width, height } = getSize();
+			camera.aspect = width / height;
 			camera.updateProjectionMatrix();
-			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.setSize(width, height);
 		};
 
 		window.addEventListener('resize', handleResize);
+		const ro = new ResizeObserver(handleResize);
+		ro.observe(container);
+
 
 		// Start animation
 		start();
@@ -160,32 +179,20 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		// Cleanup function
 		return () => {
 			window.removeEventListener('resize', handleResize);
+			ro.disconnect();
 			document.removeEventListener('visibilitychange', handleVisibility);
 
 			stop();
 
-			if (sceneRef.current) {
-
-				sceneRef.current.scene.traverse((object) => {
-					if (object instanceof THREE.Points) {
-						object.geometry.dispose();
-						if (Array.isArray(object.material)) {
-							object.material.forEach((material) => material.dispose());
-						} else {
-							object.material.dispose();
-						}
-					}
-				});
-
-				sceneRef.current.renderer.dispose();
-
-				if (containerRef.current && sceneRef.current.renderer.domElement) {
-					containerRef.current.removeChild(
-						sceneRef.current.renderer.domElement,
-					);
-				}
-			}
+			// Dispose this effect's own objects (not sceneRef, which a second
+			// mount may already have overwritten — that left a stale canvas behind).
+			geometry.dispose();
+			material.dispose();
+			renderer.dispose();
+			renderer.domElement.remove();
+			sceneRef.current = null;
 		};
+
 	}, []);
 
 	return (
