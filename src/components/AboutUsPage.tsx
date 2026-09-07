@@ -252,8 +252,10 @@ const AboutUsPage: React.FC = () => {
                 features={member.expertise}
                 color={member.color}
                 imageUrl={getOptimizedImageUrl(member.imageUrl, 400)}
+                imagePosition={(member as any).imagePosition}
                 onLearnMore={() => setActiveMember(index)}
               />
+
             ))}
           </div>
         </div>
