@@ -42,7 +42,7 @@ const accordionItems = [
   {
     id: 6,
     title: 'Content Creation',
-    imageUrl: '/images/hanane_benalia_image_copy.webp',
+    imageUrl: contentCreationAsset.url,
     link: '/services/content-creation',
   },
   {
