@@ -21,7 +21,7 @@ const AboutUsPage: React.FC = () => {
       message: "SamysAI exists to make advanced technology practical.\n\nWe build AI powered systems, digital products, and growth infrastructure for businesses that need their operations to run more reliably. That means AI phone callers and chatbots, web and app development, cold email dashboards and content systems, delivered as one connected stack rather than separate services.\n\nOur approach starts with the business problem. We look at how work happens today, where time is lost, and where a system can carry the repetitive load. Then we build something that fits how the team already works.\n\nIf that is the kind of technology partner you are looking for, we would be glad to talk.",
       color: "#3b82f6",
       expertise: ['Strategy', 'Business Systems', 'AI Solutions', 'Growth'],
-      imageUrl: "/images/a485aafb-cc89-4b59-ae01-069e508b4907.webp"
+      imageUrl: samyCeoAsset.url
     },
     {
       name: "JZ",
