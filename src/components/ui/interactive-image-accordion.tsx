@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { getOptimizedImageUrl, getImageSrcSet } from '@/utils/image-optimization';
+import contentCreationAsset from '@/assets/Content_Creation-2.JPG.asset.json';
 
 const accordionItems = [
   {
@@ -41,7 +42,7 @@ const accordionItems = [
   {
     id: 6,
     title: 'Content Creation',
-    imageUrl: '/images/hanane_benalia_image_copy.webp',
+    imageUrl: contentCreationAsset.url,
     link: '/services/content-creation',
   },
   {
