@@ -12,7 +12,9 @@ export interface CardFlipProps {
   color?: string;
   onLearnMore?: () => void;
   imageUrl?: string;
+  imagePosition?: string;
 }
+
 
 export default function CardFlip({
   title = 'Build MVPs Fast',
