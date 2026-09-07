@@ -5,6 +5,7 @@ import { Component as HeroSection } from './ui/hero-section';
 import TeamMessageModal from './TeamMessageModal';
 import CardFlip from './ui/flip-card';
 import { getOptimizedImageUrl } from '@/utils/image-optimization';
+import samyCeoAsset from '@/assets/Samy_CEO.JPG.asset.json';
 
 const AboutUsPage: React.FC = () => {
   const [teamVisible, setTeamVisible] = useState(false);
