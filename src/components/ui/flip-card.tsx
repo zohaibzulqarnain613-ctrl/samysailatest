@@ -12,7 +12,9 @@ export interface CardFlipProps {
   color?: string;
   onLearnMore?: () => void;
   imageUrl?: string;
+  imagePosition?: string;
 }
+
 
 export default function CardFlip({
   title = 'Build MVPs Fast',
@@ -26,8 +28,10 @@ export default function CardFlip({
   ],
   color = '#ff2e88',
   onLearnMore,
-  imageUrl
+  imageUrl,
+  imagePosition = 'center center',
 }: CardFlipProps) {
+
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -75,10 +79,12 @@ export default function CardFlip({
                   alt={title}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: imagePosition }}
                   width="128"
                   height="128"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
