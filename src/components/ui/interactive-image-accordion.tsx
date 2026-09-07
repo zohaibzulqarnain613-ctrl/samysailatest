@@ -43,12 +43,14 @@ const accordionItems = [
     id: 6,
     title: 'Content Creation',
     imageUrl: contentCreationAsset.url,
+    imageFit: 'contain' as const,
     link: '/services/content-creation',
   },
   {
     id: 7,
     title: 'Digital Marketing',
     imageUrl: '/images/image.webp',
+    imageFit: 'contain' as const,
     link: '/services/digital-marketing',
   },
 ];
