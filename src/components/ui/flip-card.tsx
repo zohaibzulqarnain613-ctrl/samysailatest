@@ -28,8 +28,10 @@ export default function CardFlip({
   ],
   color = '#ff2e88',
   onLearnMore,
-  imageUrl
+  imageUrl,
+  imagePosition = 'center center',
 }: CardFlipProps) {
+
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
