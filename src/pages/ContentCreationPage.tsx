@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ServiceParallaxContent } from '../components/ui/text-parallax-content-scroll';
 import { Link } from '@tanstack/react-router';
+import contentCreationAsset from '@/assets/content-creation.jpg.asset.json';
 
 const ContentCreationPage: React.FC = () => {
   useEffect(() => {
@@ -9,7 +10,7 @@ const ContentCreationPage: React.FC = () => {
 
   const parallaxItems = [
     {
-      imgUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2340&auto=format&fit=crop",
+      imgUrl: contentCreationAsset.url,
       subheading: "AI Content Creation",
       heading: "AI Content Creation for Business",
       title: "Create Content With AI",

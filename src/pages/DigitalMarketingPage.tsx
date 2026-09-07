@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ServiceParallaxContent } from '../components/ui/text-parallax-content-scroll';
 import { Link } from '@tanstack/react-router';
+import digitalMarketingAsset from '@/assets/digital-marketing.jpg.asset.json';
 
 const DigitalMarketingPage: React.FC = () => {
   useEffect(() => {
@@ -9,7 +10,7 @@ const DigitalMarketingPage: React.FC = () => {
 
   const parallaxItems = [
     {
-      imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2340&auto=format&fit=crop",
+      imgUrl: digitalMarketingAsset.url,
       subheading: "Digital Marketing",
       heading: "Digital Marketing for Business",
       title: "Build a Stronger Digital Presence",
