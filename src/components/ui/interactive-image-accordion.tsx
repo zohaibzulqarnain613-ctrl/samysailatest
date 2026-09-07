@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { getOptimizedImageUrl, getImageSrcSet } from '@/utils/image-optimization';
 import contentCreationAsset from '@/assets/Content_Creation-2.JPG.asset.json';
+import digitalMarketingAsset from '@/assets/Digital_marketing-2.JPG.asset.json';
 
 const accordionItems = [
   {
