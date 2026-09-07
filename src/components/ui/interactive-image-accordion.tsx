@@ -50,7 +50,7 @@ const accordionItems = [
   {
     id: 7,
     title: 'Digital Marketing',
-    imageUrl: '/images/image.webp',
+    imageUrl: digitalMarketingAsset.url,
     imageFit: 'contain' as const,
     link: '/services/digital-marketing',
   },
