@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { ServiceParallaxContent } from '../components/ui/text-parallax-content-scroll';
 import { Link } from '@tanstack/react-router';
-import digitalMarketingAsset from '@/assets/digital-marketing.jpg.asset.json';
 
 const DigitalMarketingPage: React.FC = () => {
   useEffect(() => {
