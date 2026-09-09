@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useNavigate, useLocation } from '@tanstack/react-router';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import { SterlingGateKineticNavigation } from './ui/sterling-gate-kinetic-navigation';
 import { scrollToSection } from '@/utils/scroll-to-section';
+
+// The animated mobile menu ships a large animation runtime. Loading it in its own
+// chunk keeps it out of the initial payload; the visuals are unchanged.
+const SterlingGateKineticNavigation = lazy(() =>
+  import('./ui/sterling-gate-kinetic-navigation').then((m) => ({
+    default: m.SterlingGateKineticNavigation,
+  }))
+);
+
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
@@ -203,7 +211,19 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <SterlingGateKineticNavigation />
+            <Suspense
+              fallback={
+                <div className="flex items-center gap-2 p-2" aria-hidden="true">
+                  <span className="h-5 flex items-center text-white text-sm font-bold uppercase tracking-widest">
+                    Menu
+                  </span>
+                  <span className="w-4 h-4" />
+                </div>
+              }
+            >
+              <SterlingGateKineticNavigation />
+            </Suspense>
+
           </div>
         </div>
       </div>
