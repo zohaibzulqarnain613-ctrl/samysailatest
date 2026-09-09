@@ -1,8 +1,11 @@
 import React, { Suspense, lazy, useState, useEffect, useRef } from 'react';
 
-const Spline = lazy(() => import('@splinetool/react-spline'));
+const splineModule = () => import('@splinetool/react-spline');
+const Spline = lazy(splineModule);
 
 if (typeof window !== 'undefined') {
+  // Start fetching the viewer + runtime right away so the robot can paint ASAP.
+  splineModule();
   import('@splinetool/runtime');
 }
 
@@ -38,25 +41,8 @@ const SplineScene: React.FC<SplineSceneProps> = ({ scene, className = '' }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    // Viewport-based loading strategy
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setShouldLoad(true);
-        observer.disconnect();
-      }
-    }, { 
-      rootMargin: '600px' 
-    });
-
-    observer.observe(container);
-
-    return () => {
-      observer.disconnect();
-    };
+    // Hero is above the fold: mount immediately after hydration, no observer delay.
+    setShouldLoad(true);
   }, []);
 
   const handleError = () => {
