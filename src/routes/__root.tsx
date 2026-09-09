@@ -122,10 +122,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "dns-prefetch",
         href: "https://prod.spline.design",
       },
-      {
-        rel: "preconnect",
-        href: "https://images.unsplash.com",
-      },
 
       {
         rel: "preconnect",
