@@ -1,8 +1,11 @@
 import React, { Suspense, lazy, useState, useEffect, useRef } from 'react';
 
-const Spline = lazy(() => import('@splinetool/react-spline'));
+const splineModule = () => import('@splinetool/react-spline');
+const Spline = lazy(splineModule);
 
 if (typeof window !== 'undefined') {
+  // Start fetching the viewer + runtime right away so the robot can paint ASAP.
+  splineModule();
   import('@splinetool/runtime');
 }
 
