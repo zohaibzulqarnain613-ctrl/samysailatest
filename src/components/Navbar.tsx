@@ -193,7 +193,7 @@ const Navbar: React.FC = () => {
 
             <Link
               to="/blog"
-              preload="intent"
+              preload="render"
               className={`text-sm font-medium transition-all duration-300 hover:text-blue-400 ${
                 location.pathname.startsWith('/blog') ? 'text-blue-400' : 'text-gray-300'
               }`}
