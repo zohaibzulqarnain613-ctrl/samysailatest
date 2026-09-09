@@ -211,7 +211,19 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <SterlingGateKineticNavigation />
+            <Suspense
+              fallback={
+                <div className="flex items-center gap-2 p-2" aria-hidden="true">
+                  <span className="h-5 flex items-center text-white text-sm font-bold uppercase tracking-widest">
+                    Menu
+                  </span>
+                  <span className="w-4 h-4" />
+                </div>
+              }
+            >
+              <SterlingGateKineticNavigation />
+            </Suspense>
+
           </div>
         </div>
       </div>
