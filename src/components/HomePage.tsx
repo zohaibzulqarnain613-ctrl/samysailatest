@@ -4,8 +4,8 @@ import { Tag } from '@/components/ui/vapour-text-effect';
 import ResponsiveVaporizeText from '@/components/ResponsiveVaporizeText';
 import TypewriterEffect from '@/components/TypewriterEffect';
 import { MarqueeAnimation } from '@/components/ui/marquee-effect';
+import SplineScene from '@/components/SplineScene';
 
-const SplineScene = lazy(() => import('@/components/SplineScene'));
 const ServicesSection = lazy(() => import('@/components/ServicesSection'));
 const HowItWorksSection = lazy(() => import('@/components/HowItWorksSection'));
 const CaseStudiesSection = lazy(() => import('@/components/CaseStudiesSection'));
