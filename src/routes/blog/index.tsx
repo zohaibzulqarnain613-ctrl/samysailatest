@@ -1,7 +1,5 @@
-import React from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { lazyRouteComponent } from "@tanstack/react-router";
-const BlogPage = lazyRouteComponent(() => import("@/pages/BlogPage"));
+import BlogPage from "@/pages/BlogPage";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -15,7 +13,15 @@ export const Route = createFileRoute("/blog/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://samysai.com/blog" }
+      { rel: "canonical", href: "https://samysai.com/blog" },
+      { rel: "preconnect", href: "https://images.unsplash.com", crossOrigin: "anonymous" },
+      { rel: "dns-prefetch", href: "https://images.unsplash.com" },
+      {
+        rel: "preload",
+        as: "image",
+        href: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=640&h=360&fit=crop&auto=format&q=60",
+        fetchpriority: "high",
+      },
     ],
   }),
   component: BlogPage,
