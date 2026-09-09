@@ -41,25 +41,8 @@ const SplineScene: React.FC<SplineSceneProps> = ({ scene, className = '' }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    // Viewport-based loading strategy
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setShouldLoad(true);
-        observer.disconnect();
-      }
-    }, { 
-      rootMargin: '600px' 
-    });
-
-    observer.observe(container);
-
-    return () => {
-      observer.disconnect();
-    };
+    // Hero is above the fold: mount immediately after hydration, no observer delay.
+    setShouldLoad(true);
   }, []);
 
   const handleError = () => {
