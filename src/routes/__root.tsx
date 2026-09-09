@@ -123,11 +123,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://prod.spline.design",
       },
       {
-        rel: "preload",
-        href: "https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode",
-        as: "fetch",
-        crossOrigin: "anonymous",
+        rel: "preconnect",
+        href: "https://images.unsplash.com",
       },
+
       {
         rel: "preconnect",
         href: "https://images.unsplash.com",
