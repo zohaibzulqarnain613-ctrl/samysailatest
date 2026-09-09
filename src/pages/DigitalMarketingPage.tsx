@@ -9,7 +9,7 @@ const DigitalMarketingPage: React.FC = () => {
 
   const parallaxItems = [
     {
-      imgUrl: digitalMarketingAsset.url,
+      imgUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2340&auto=format&fit=crop",
       subheading: "Digital Marketing",
       heading: "Digital Marketing for Business",
       title: "Build a Stronger Digital Presence",
