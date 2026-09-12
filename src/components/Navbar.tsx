@@ -6,7 +6,7 @@ import { scrollToSection } from '@/utils/scroll-to-section';
 
 // The animated mobile menu ships a large animation runtime. Loading it in its own
 // chunk keeps it out of the initial payload; the visuals are unchanged.
-const SterlingGateKineticNavigation = lazy(() =>
+const SterlingGateKineticNavigation = lazyWithRetry(() =>
   import('./ui/sterling-gate-kinetic-navigation').then((m) => ({
     default: m.SterlingGateKineticNavigation,
   }))
