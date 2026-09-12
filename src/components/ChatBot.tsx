@@ -12,8 +12,11 @@ const ChatBot: FC = () => {
 
     window.VG_CONFIG = {
       ID: 'pCKLFgnMUr7ITbTKd7gF',
-      region: 'eu',
+      region: 'na',
       render: 'bottom-right',
+      stylesheets: [
+        'https://cdn.convocore.ai/vg_live_build/styles.css',
+      ],
     };
 
     const script = document.createElement('script');

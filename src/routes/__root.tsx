@@ -203,11 +203,12 @@ function DeferredChatBot() {
   useEffect(() => {
     const timer = setTimeout(() => {
       if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(() => setShouldRender(true));
+        // Timeout guarantees the chatbot mounts even when the main thread stays busy.
+        window.requestIdleCallback(() => setShouldRender(true), { timeout: 1500 });
       } else {
         setShouldRender(true);
       }
-    }, 3500);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
