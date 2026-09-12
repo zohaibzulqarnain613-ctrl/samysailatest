@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { WordPullUp } from '@/components/ui/word-pull-up';
 import { Tag } from '@/components/ui/vapour-text-effect';
 import ResponsiveVaporizeText from '@/components/ResponsiveVaporizeText';
