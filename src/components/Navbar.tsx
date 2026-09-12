@@ -1,4 +1,5 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
+import { lazyWithRetry } from '@/lib/lazy-with-retry';
 import { Link, useNavigate, useLocation } from '@tanstack/react-router';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { scrollToSection } from '@/utils/scroll-to-section';
