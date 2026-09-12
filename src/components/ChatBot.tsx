@@ -6,7 +6,7 @@ declare global {
   }
 }
 
-const ChatBot: React.FC = () => {
+const ChatBot: FC = () => {
   useEffect(() => {
     if (document.getElementById('vg_bundle_script')) return;
 
