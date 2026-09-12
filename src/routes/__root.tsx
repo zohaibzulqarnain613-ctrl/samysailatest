@@ -8,13 +8,14 @@ import {
   Scripts,
   useLocation,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode, Suspense, lazy, useState } from "react";
+import { useEffect, type ReactNode, Suspense, useState } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { lazyWithRetry } from "../lib/lazy-with-retry";
 import Navbar from "@/components/Navbar";
 
-const ChatBot = lazy(() => import("@/components/ChatBot"));
+const ChatBot = lazyWithRetry(() => import("@/components/ChatBot"));
 
 function NotFoundComponent() {
   return (

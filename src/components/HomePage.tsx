@@ -1,19 +1,20 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { WordPullUp } from '@/components/ui/word-pull-up';
 import { Tag } from '@/components/ui/vapour-text-effect';
 import ResponsiveVaporizeText from '@/components/ResponsiveVaporizeText';
 import TypewriterEffect from '@/components/TypewriterEffect';
 import { MarqueeAnimation } from '@/components/ui/marquee-effect';
 import SplineScene from '@/components/SplineScene';
+import { lazyWithRetry } from '@/lib/lazy-with-retry';
 
-const ServicesSection = lazy(() => import('@/components/ServicesSection'));
-const HowItWorksSection = lazy(() => import('@/components/HowItWorksSection'));
-const CaseStudiesSection = lazy(() => import('@/components/CaseStudiesSection'));
-const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
-const FAQSection = lazy(() => import('@/components/FAQSection'));
-const ContactFooter = lazy(() => import('@/components/ContactFooter'));
-const DottedSurface = lazy(() => import('@/components/ui/dotted-surface').then(module => ({ default: module.DottedSurface })));
-const LandingAccordionItem = lazy(() => import('./ui/interactive-image-accordion').then(module => ({ default: module.LandingAccordionItem })));
+const ServicesSection = lazyWithRetry(() => import('@/components/ServicesSection'));
+const HowItWorksSection = lazyWithRetry(() => import('@/components/HowItWorksSection'));
+const CaseStudiesSection = lazyWithRetry(() => import('@/components/CaseStudiesSection'));
+const TestimonialsSection = lazyWithRetry(() => import('@/components/TestimonialsSection'));
+const FAQSection = lazyWithRetry(() => import('@/components/FAQSection'));
+const ContactFooter = lazyWithRetry(() => import('@/components/ContactFooter'));
+const DottedSurface = lazyWithRetry(() => import('@/components/ui/dotted-surface').then(module => ({ default: module.DottedSurface })));
+const LandingAccordionItem = lazyWithRetry(() => import('./ui/interactive-image-accordion').then(module => ({ default: module.LandingAccordionItem })));
 
 // Mounts the WebGL dotted surface only after the hero has painted, so the
 // heavy 3D runtime never blocks first paint. Visually identical once loaded.
