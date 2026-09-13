@@ -4,7 +4,7 @@ import { Link } from '@tanstack/react-router';
 
 const TermsOfServicePage: React.FC = () => {
   const lastUpdated = "August 16, 2026";
-  const contactEmail = "samy@samysai.info";
+  const contactEmail = "support@samysai.ca";
   const jurisdiction = "[INSERT GOVERNING LAW / JURISDICTION]";
 
   const sections = [

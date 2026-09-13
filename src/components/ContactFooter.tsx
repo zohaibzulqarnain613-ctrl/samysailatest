@@ -112,8 +112,8 @@ const ContactFooter = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Email Us</h3>
-                  <a href="mailto:samy@samysai.info" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
-                    samy@samysai.info
+                  <a href="mailto:support@samysai.ca" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                    support@samysai.ca
                   </a>
                 </div>
               </motion.div>
@@ -131,7 +131,7 @@ const ContactFooter = () => {
             </div>
             <div className="mt-8 flex space-x-3">
               {[
-                { icon: <Instagram className="h-5 w-5" />, label: "Instagram", href: "https://www.instagram.com/samys.ai?igsh=bzVxcHdndzBmYTZ3" },
+                { icon: <Instagram className="h-5 w-5" />, label: "Instagram", href: "https://www.instagram.com/samysai.ca?stkn=MWtmNnk5MHRuMGZvMA%3D%3D&utm_source=qr" },
                 { icon: <Twitter className="h-5 w-5" />, label: "Twitter", href: "https://x.com/samys_ai?s=21" },
                 { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", href: "#" },
                 { icon: <Facebook className="h-5 w-5" />, label: "Facebook", href: "#" },
