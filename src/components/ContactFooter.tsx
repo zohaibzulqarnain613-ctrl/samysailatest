@@ -329,9 +329,13 @@ const ContactFooter = () => {
               <motion.div
                 whileHover={{ rotate: 5, scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg"
+                className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg overflow-hidden"
               >
-                S
+                <img
+                  src="/favicon.png"
+                  alt="SamysAI Logo"
+                  className="w-full h-full object-contain p-1"
+                />
               </motion.div>
               <span className="text-xl font-bold tracking-tighter text-white">SamysAI</span>
             </Link>
