@@ -483,10 +483,10 @@ export function SterlingGateKineticNavigation() {
             <div>
               <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">Get in touch</p>
               <a
-                href="mailto:samy@samysai.ifo"
-                className="text-lg font-black text-white hover:text-blue-400 transition-colors italic"
+                href="mailto:support@samysai.ca"
+                className="text-lg font-black text-white hover:text-blue-400 transition-colors italic break-all"
               >
-                samy@samysai.ifo
+                support@samysai.ca
               </a>
             </div>
           </div>
