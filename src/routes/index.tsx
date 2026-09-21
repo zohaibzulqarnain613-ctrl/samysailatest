@@ -19,7 +19,11 @@ export const Route = createFileRoute("/")({
           "AI phone callers, chatbots, cold email and custom builds that automate your growth.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://samysailatest.lovable.app/samysai-social-card.jpg" },
+      { property: "og:image:alt", content: "SamysAI — AI Automation That Scales Your Business" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://samysailatest.lovable.app/samysai-social-card.jpg" },
+      { name: "twitter:image:alt", content: "SamysAI — AI Automation That Scales Your Business" },
     ],
     links: [
       {

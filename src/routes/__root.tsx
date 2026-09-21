@@ -99,8 +99,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "AI phone callers, chatbots, outreach automations and custom software that scale your business. See verified client experiences and case studies.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/images/hanane_benalia_image_copy.jpeg" },
-      { property: "og:image:alt", content: "SamysAI client experience — Hanane Benalia" },
       { property: "og:site_name", content: "SamysAI" },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -110,8 +108,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "AI phone callers, chatbots, outreach automations and custom software that scale your business.",
       },
-      { name: "twitter:image", content: "/images/hanane_benalia_image_copy.jpeg" },
-      { name: "twitter:image:alt", content: "SamysAI client experience — Hanane Benalia" },
     ],
     links: [
       {
