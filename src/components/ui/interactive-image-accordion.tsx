@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { getOptimizedImageUrl, getImageSrcSet } from '@/utils/image-optimization';
-import contentCreationAsset from '@/assets/Content_Creation-2.JPG.asset.json';
-import digitalMarketingAsset from '@/assets/Digital_marketing-2.JPG.asset.json';
 
 const accordionItems = [
   {
@@ -43,14 +41,14 @@ const accordionItems = [
   {
     id: 6,
     title: 'Content Creation',
-    imageUrl: contentCreationAsset.url,
+    imageUrl: '/images/services/content-creation.webp',
     imageFit: 'contain' as const,
     link: '/services/content-creation',
   },
   {
     id: 7,
     title: 'Digital Marketing',
-    imageUrl: digitalMarketingAsset.url,
+    imageUrl: '/images/services/digital-marketing.webp',
     imageFit: 'contain' as const,
     link: '/services/digital-marketing',
   },

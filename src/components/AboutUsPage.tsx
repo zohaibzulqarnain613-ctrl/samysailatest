@@ -5,7 +5,6 @@ import { Component as HeroSection } from './ui/hero-section';
 import TeamMessageModal from './TeamMessageModal';
 import CardFlip from './ui/flip-card';
 import { getOptimizedImageUrl } from '@/utils/image-optimization';
-import samyCeoAsset from '@/assets/Samy_CEO.JPG.asset.json';
 
 const AboutUsPage: React.FC = () => {
   const [teamVisible, setTeamVisible] = useState(false);
@@ -21,7 +20,7 @@ const AboutUsPage: React.FC = () => {
       message: "SamysAI exists to make advanced technology practical.\n\nWe build AI powered systems, digital products, and growth infrastructure for businesses that need their operations to run more reliably. That means AI phone callers and chatbots, web and app development, cold email dashboards and content systems, delivered as one connected stack rather than separate services.\n\nOur approach starts with the business problem. We look at how work happens today, where time is lost, and where a system can carry the repetitive load. Then we build something that fits how the team already works.\n\nIf that is the kind of technology partner you are looking for, we would be glad to talk.",
       color: "#3b82f6",
       expertise: ['Strategy', 'Business Systems', 'AI Solutions', 'Growth'],
-      imageUrl: samyCeoAsset.url,
+      imageUrl: "/images/samy-ceo.webp",
       imagePosition: '30% 30%'
     },
 
