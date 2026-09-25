@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep user-facing images needed on third-party deployments in `public/images`; Lovable-only asset paths are not portable to Vercel.

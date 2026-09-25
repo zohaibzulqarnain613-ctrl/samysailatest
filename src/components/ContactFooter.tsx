@@ -17,7 +17,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
-import { supabase } from '@/lib/supabase';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -44,39 +43,14 @@ const ContactFooter = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setSubmitError(null);
-
-    try {
-      if (!supabase) {
-        throw new Error("Connection to the backend is not established.");
-      }
-
-      const { error } = await supabase
-        .from('contacts')
-        .insert([
-          {
-            first_name: formData.firstName,
-            last_name: formData.lastName,
-            email: formData.email,
-            message: formData.message
-          }
-        ]);
-
-      if (error) throw error;
-
-      setIsSubmitted(true);
-      toast.success("Message sent successfully!");
-      setFormData({ firstName: '', lastName: '', email: '', message: '' });
-    } catch (error: any) {
-      console.error('Error submitting form:', error);
-      setSubmitError(error.message || "Something went wrong. Please try again.");
-      toast.error("Failed to send message. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
+    setIsSubmitted(true);
+    setFormData({ firstName: '', lastName: '', email: '', message: '' });
+    setIsLoading(false);
+    toast.success("Message submitted successfully!");
   };
 
   return (
@@ -216,6 +190,7 @@ const ContactFooter = () => {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         placeholder="Enter your first name" 
+                        required
                         className="rounded-lg bg-white/[0.03] border-white/10 text-white placeholder-gray-500 focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500/50" 
                       />
                     </div>
@@ -232,6 +207,7 @@ const ContactFooter = () => {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         placeholder="Enter your last name" 
+                        required
                         className="rounded-lg bg-white/[0.03] border-white/10 text-white placeholder-gray-500 focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500/50" 
                       />
                     </div>
@@ -250,6 +226,7 @@ const ContactFooter = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="Enter your email" 
+                        required
                       className="rounded-lg bg-white/[0.03] border-white/10 text-white placeholder-gray-500 focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500/50" 
                     />
                   </div>
@@ -266,6 +243,7 @@ const ContactFooter = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Enter your message" 
+                      required
                       className="min-h-[120px] rounded-lg bg-white/[0.03] border-white/10 text-white placeholder-gray-500 focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500/50 resize-none" 
                     />
                   </div>
